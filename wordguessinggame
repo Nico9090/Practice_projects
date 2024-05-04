@@ -1,0 +1,22 @@
+import random
+import string
+supplies=['pencil','pen','notebook']
+word=random.choice(supplies)
+name=input('What is your name? ')
+print('Hello, ', name,'! Welcome to the word guessing game!')
+
+lines='_'*len(word)
+print(lines)
+
+
+chances=len(word)-2
+while chances!=0:
+        user_let=input('Input your chosen letter ')
+        if user_let in word:
+                al=word.index(user_let)
+                lines= lines[:al]+ user_let + lines[al+1:]
+                print(lines)
+        else:
+                print('Sorry, no ',user_let,' !')
+                chances-=1
+                print('You have ',chances,' more tries!')
