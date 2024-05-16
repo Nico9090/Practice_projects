@@ -2,7 +2,7 @@
 import pandas as pd
 import math as m
 import numpy as np
-df=pd.read_csv('/root/nicko/bioinformatics_proj/AZD6244_cleaned.csv')
+df=pd.read_csv('AZD6244_cleaned.csv')
 #Total of all x and all y
 x_sum=df['ic50_effect_size'].sum()
 y_sum=df['fdr'].sum()
